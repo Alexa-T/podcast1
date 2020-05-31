@@ -1,0 +1,17 @@
+@import './reset.scss';
+@import './menu.scss';
+@import './head_&_podcasts.scss';
+@import './guests_&_areas.scss';
+@import './latest_&_footer.scss';
+
+$but_b: #00F3BB;
+$but_b_h: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+
+:root{    
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}

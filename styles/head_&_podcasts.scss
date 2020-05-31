@@ -1,0 +1,538 @@
+$but_b: #00F3BB;
+$but_b_h: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+
+.head{
+    display: flex;
+    flex-flow: column wrap;     
+    height: 250px;  
+    padding: 29px 5% 0 5%;          
+
+    .title{
+        margin: 0;
+        font-family: 'IBM Plex Sans';
+        font-size: 36px;
+        font-weight: 500;
+        width: 100%;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 42px;
+        display: flex;
+        flex-flow: row wrap;        
+
+        &.one{            
+            height: 42px;
+            width: max-content;                     
+        }         
+
+        &.two{            
+            width: max-content;
+            margin-left: 8px;
+            height: 42px;
+            text-decoration: line-through;                                              
+        }
+
+        &.three{            
+            width: max-content;
+            height: 42px;                       
+                
+            &::after{
+                content: '.'; 
+                margin-left: 2px;                
+                font-size: 36px;
+                color: #060A24;                               
+            }        
+        }        
+    }   
+    
+    .bajada{        
+        height: 66px;
+        font-family: 'IBM Plex Mono', monospace;        
+        margin-top: 16px;
+        margin-bottom: 36px;
+        font-weight: 500;       
+        font-size: 14px;
+        color: #060A24;
+        letter-spacing: 0;
+        line-height: 22px; 
+        
+        & p{
+            margin: 0;
+        }
+        
+    }
+    
+    .more {  
+        width: 288px;
+        height: 48px;
+        margin-top: 0; 
+        display: flex;
+        align-items: center;
+        justify-content: center;           
+        background-color: $but_b;                                 
+        text-decoration: none; 
+        color: #060A24;                      
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 16px;
+        font-weight: 500;                
+        letter-spacing: 0;                
+        line-height: 22px; 
+        text-transform: uppercase; 
+        
+        &:hover{
+            background-image: $but_b_h;
+            color: #FFFFFF;                                
+        }
+    }      
+}
+
+.pod{    
+    display: flex;
+    flex-flow: row wrap;          
+    margin-top: 24px; 
+    height: 1995px;      
+
+    .episodios{
+        top: 0;
+        height: 1203px;
+        width: 100vw;
+        background-image: linear-gradient(225deg, #0000FF 0%, #0000a3 100%);               
+        clip-path: polygon(0 2.65%, 100% 0%, 100% 97.25%, 0% 100%);        
+    }
+
+    .pod_title{    
+        position: absolute;        
+        color: #ffffff;
+        margin-top: 64px;
+        font-family: 'IBM Plex Sans';        
+        font-size: 36px;
+        font-weight: 500;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        line-height: 42px;
+        width: 157px;
+        margin-left: 16px;
+        margin-bottom: 0;
+    }    
+    
+    .podcasts{        
+        margin-top: 127px;
+        height: 940px;
+        display: flex;
+        flex-flow: row wrap;
+        
+        .ifr_1, .ifr_2, .ifr_3, .ifr_4{
+            display: flex;            
+            align-items: flex-start;
+            top: 0;
+            margin-left: calc(100% - 96.5%);                       
+            height: 225px;
+            width: 298px; 
+            border: none;                     
+        }                 
+    }  
+    
+    .phone{
+        display: flex;        
+        flex-flow: column wrap;
+        justify-content: center;
+        transform: translateY(-98px);
+    }
+    .phone_img{              
+        display: block;        
+        width: auto;
+        height: 519px; 
+        z-index: 2;       
+    } 
+
+    .art1{
+        height: 346px;
+        width: 288px;
+        margin: 27px 16px 0 16px;        
+    
+        & h2{
+            font-family: 'IBM Plex Sans';
+            font-size: 36px;
+            color: #060A24;
+            letter-spacing: 0;
+            font-weight: 500;
+            line-height: 42px;
+            margin-top: 0;
+            margin: 0;
+        }
+    
+        & p{
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            font-weight: 500;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 22px;
+            margin-top: 8px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*media query para pantallas de 768px - tablet */
+@media screen and (min-width: 768px){
+    
+    .pod{
+        margin-top: 0;
+    }
+    
+    .episodios{
+
+        .pod_title{
+            margin-top: 80px;
+            margin-left: calc(100vw - 95.1vw);
+        }
+
+        .podcasts{
+            margin-top: 200px;
+            display: flex;
+            justify-content: space-between;
+
+            .ifr_1, .ifr_2, .ifr_3, .ifr_4{
+                margin: 4.9%;
+                width: 40%;                
+            }
+        }
+    }
+
+    .phone{
+        display: flex; 
+        flex-flow: row;
+        justify-content: center; 
+        height: 571px;
+        width: 100vw;           
+
+        .phone_img{  
+            transform: translateY(-30px);                
+            margin-left: calc(100vw - 97vw);                           
+        }
+
+        .art1{
+            height: auto;            
+            margin-top: 0;
+            margin-right: calc(100vw - 97vw);   
+        }
+    }
+}
+
+/*media query para pantallas de 1024px en adelante */
+@media screen and (min-width: 1024px){
+    .head{                
+    
+        .title{            
+            width: 740px;            
+            font-size: 64px;            
+            letter-spacing: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            &.one{
+                width: max-content;
+                height: 84px;                
+            }  
+    
+            &.two{
+                width: max-content;
+                text-decoration: line-through; 
+                margin-left: 0;
+                height: 84px;                                                  
+            }
+    
+            &.three{
+                width: max-content; 
+                height: 84px;           
+                    
+                &::after{
+                    content: '.';
+                    color:  #0000EC;
+                    font-size: 64px;
+                     
+                }            
+            }
+        }    
+    
+        .bajada{
+            width: 628px;
+            height: 48px;                       
+            font-size: 16px;            
+            letter-spacing: 0;
+            line-height: 24px;
+            text-align: left; 
+            margin-bottom: 0;
+            
+            p{
+                display: none;
+            }
+            
+            &::before{
+                content: 'El portal de poscasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.';                
+            }    
+        }
+
+        .more{
+            margin-top: 40px;
+        }
+    }
+
+    .pod{    
+        display: flex;
+        flex-flow: row wrap;    
+        width: 100%;        
+        max-height: 1515px;            
+             
+        .episodios{
+            top: 0;            
+            margin: 0;
+            height: 1042.6px;
+            background-image: linear-gradient(225deg, #0000FF 0%, #0000a3 100%);            
+            background-repeat: no-repeat;
+            clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);    
+        }    
+    
+        .pod_title{            
+            margin-top: 186px;                  
+            font-size: 48px;
+            line-height: 62px;            
+            letter-spacing: 0;
+            width: 157px;
+            margin-left: calc(100% - 95%);             
+        }    
+        
+        .podcasts{            
+            display: flex;
+            flex-flow: row wrap;                        
+            margin-top: 274px;            
+            height: 536px;            
+            
+            .ifr_1, .ifr_2, .ifr_3, .ifr_4{                
+                height: 232px;
+                width: 384px; 
+                margin: auto;        
+            }            
+        }  
+        
+        .phone{
+            display: flex; 
+            flex-flow: row;
+            justify-content: center; 
+            height: 571px;           
+    
+            .phone_img{  
+                transform: translateY(-89px);                
+                margin-left: calc(100% - 86.2%);
+                      
+                width: auto;
+                height: 660px; 
+                z-index: 2;       
+            }
+    
+            .art1{
+                height: auto;
+                width: 364px;
+                margin: 109px 0;
+                margin-right: calc(100% - 86.2%);
+                
+    
+                & h2{
+                    font-family: 'IBM Plex Sans';
+                    font-size: 48px;                    
+                    letter-spacing: 0; 
+                    margin-top: 0;
+                }
+    
+                & p{
+                    font-family: 'IBM Plex Mono', monospace;
+                    font-size: 16px;  
+                    font-weight: 500;                   
+                    letter-spacing: 0;
+                    line-height: 24px;
+                    margin-top: 24px;
+                }
+            }
+        }         
+    }
+}
+
+/*media query para pantallas de 1440px en adelante */
+@media screen and (min-width: 1440px){
+    .head{
+        display: flex;
+        flex-direction: column;       
+        height: 263px;       
+        margin: 120px 200px 0 200px;       
+        padding: 0;          
+    
+        .title{            
+            width: 740px;            
+            font-size: 64px;            
+            letter-spacing: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+    
+            &.one{
+                width: max-content;
+                height: 84px;                
+            }  
+    
+            &.two{
+                width: max-content;
+                text-decoration: line-through; 
+                margin-left: 0;
+                height: 84px;                                                  
+            }
+    
+            &.three{
+                width: max-content; 
+                height: 84px;           
+                    
+                &::after{
+                    content: '.';
+                    color:  #0000EC;
+                    font-size: 64px;
+                     
+                }            
+            }
+        }    
+    
+        .bajada{
+            width: 628px;
+            height: 48px;                        
+            font-size: 16px;            
+            letter-spacing: 0;
+            line-height: 24px;
+            text-align: left; 
+            margin-bottom: 0;
+            margin-top: 0;
+            
+            p{
+                display: none;
+            }
+            
+            &::before{
+                content: 'El portal de poscasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.';                
+            }    
+        }
+    
+        .more{
+            width: 226px;
+            height: 56px;
+            margin-top: 56px;
+            margin-bottom: 0; 
+            display: flex;
+            align-items: center;
+            justify-content: center;           
+            background-color: $but_b; 
+            text-decoration: none;          
+            font-size: 18px;
+            font-weight: 500; 
+            text-align: center;               
+            letter-spacing: 0;                
+            line-height: 24px;
+            margin-bottom: 0;
+            
+            &:hover{
+                background-image: $but_b_h;
+                color: #FFFFFF;                           
+            }            
+        }        
+    } 
+    
+    .pod {    
+        margin-top: 0;
+        display: flex;
+        flex-flow: row wrap;    
+        width: 100%;        
+        max-height: 1515px;    
+             
+             
+        .episodios{
+            top: 0;            
+            margin: 0;
+            height: 1042.6px;
+            background-image: linear-gradient(225deg, #0000FF 0%, #0000a3 100%);            
+            background-repeat: no-repeat;
+            clip-path: polygon(0 15%, 100% 0%, 100% 84%, 0% 100%);    
+        }    
+    
+        .pod_title{    
+            position: absolute;            
+            margin-top: 186px;                 
+            font-size: 48px;
+            line-height: 62px;           
+            letter-spacing: 0;
+            width: 157px;
+            margin-left: 200px;
+            margin-bottom: 0;    
+        }    
+        
+        .podcasts{            
+            display: flex;
+            flex-flow: row wrap;                        
+            margin-top: 274px;            
+            height: 536px;            
+            
+            .ifr_1, .ifr_2, .ifr_3, .ifr_4{
+                display: flex;                
+                top: 0;
+                margin: 0;                                      
+                height: 232px;
+                width: 584px;         
+            } 
+            
+            .ifr_1, .ifr_3{
+                margin-left: 6.9%;
+            }
+    
+            .ifr_2, .ifr_4{
+                margin-right: 6.9%;
+                margin-left: 0;
+            }
+    
+            .ifr_1, .ifr_2{
+                margin-bottom: 4%;                
+            }
+            
+        }  
+        
+        .phone{
+            display: flex; 
+            flex-flow: row;
+            justify-content: space-between; 
+            height: 587px;           
+    
+            .phone_img{  
+                transform: translateY(-73px);                
+                margin-left: 220px;                       
+                width: auto;
+                height: 660px; 
+                z-index: 2;       
+            }
+    
+            .art1{
+                height: auto;
+                width: 464px;
+                margin-top: 109px;
+                margin-left: 62px;
+                margin-right: 256px;
+    
+                & h2{                    
+                    margin-top: 0;
+                    line-height: 62px;                    
+                }
+    
+                & p{                   
+                    line-height: 24px;
+                    margin-top: 24px;
+                }
+            }
+        }         
+    }
+}
