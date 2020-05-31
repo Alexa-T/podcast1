@@ -6,7 +6,7 @@ header {
   background-color: white;
   top: 0;
   left: 0;
-  background-image: url("images/logo.svg");
+  background-image: url("../images/logo.svg");
   background-position: 16px 10px;
   background-repeat: no-repeat;
 }
@@ -122,8 +122,6 @@ header {
     height: 80px;
     top: 0;
     left: 0;
-    background-image: url("/images/logo.svg");
-    background-repeat: no-repeat;
     background-position: 10px 22px;
     background-size: 36px 36px;
   }
@@ -188,8 +186,6 @@ header {
     height: 80px;
     top: 0;
     left: 0;
-    background-image: url("/images/logo.svg");
-    background-repeat: no-repeat;
     background-position: 100px 22px;
     background-size: 36px 36px;
   }
