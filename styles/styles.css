@@ -28,7 +28,7 @@ header {
   background-color: white;
   top: 0;
   left: 0;
-  background-image: url("/images/logo.svg");
+  background-image: url("images/logo.svg");
   background-position: 16px 10px;
   background-repeat: no-repeat;
 }
@@ -432,7 +432,7 @@ header {
   top: 0;
   margin-left: calc(100% - 96.5%);
   height: 225px;
-  width: 298px;
+  width: 100%;
   border: none;
 }
 
