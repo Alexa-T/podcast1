@@ -1,8 +1,8 @@
-@use './reset'; 
-@use './menu'; 
-@use './head_&_podcasts'; 
-@use './guests_&_areas'; 
-@use './latest_&_footer'; 
+@import './reset.scss'; 
+@import './menu'; 
+@import './head_&_podcasts'; 
+@import './guests_&_areas'; 
+@import './latest_&_footer'; 
 
 
 $but_b: #00F3BB;
